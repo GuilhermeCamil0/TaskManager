@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taskmanager.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gerenciador de Tarefas" />
+
+    <!-- Tabela para listar as tarefas -->
+    <TableView fx:id="tabelaTarefas" prefHeight="300.0" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colunaId" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="colunaTitulo" prefWidth="150.0" text="Título" />
+            <TableColumn fx:id="colunaDescricao" prefWidth="250.0" text="Descrição" />
+            <TableColumn fx:id="colunaConcluida" prefWidth="80.0" text="Concluída" />
+        </columns>
+    </TableView>
+
+    <!-- Campos para adicionar nova tarefa -->
+    <HBox spacing="10.0">
+        <TextField fx:id="campoTitulo" promptText="Título da Tarefa" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="campoDescricao" promptText="Descrição da Tarefa" HBox.hgrow="ALWAYS" />
+        <Button onAction="#adicionarTarefa" text="Adicionar" />
+    </HBox>
+
+    <!-- Botões de ação para a tarefa selecionada -->
+    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <Button onAction="#marcarConcluida" text="Marcar / Desmarcar" />
+        <Button onAction="#removerTarefa" style="-fx-text-fill: red;" text="Remover Selecionada" />
+    </HBox>
+</VBox>

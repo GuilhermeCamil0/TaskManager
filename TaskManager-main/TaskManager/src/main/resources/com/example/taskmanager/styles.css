@@ -1,0 +1,16 @@
+/* Estilo para as tarefas concluídas (Verde) */
+.status-concluido {
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+}
+
+/* Estilo para as tarefas pendentes (Amarelo) */
+.status-pendente {
+    -fx-text-fill: #e0a800;
+    -fx-font-weight: bold;
+}
+
+/* Um toque extra: deixa os cabeçalhos da tabela em negrito */
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+}
